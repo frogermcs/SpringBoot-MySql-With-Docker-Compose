@@ -19,8 +19,10 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install Codebase Digest
-        run: pip install codebase-digest
+      - name: Directory review
+        run: ls -la
+      # - name: Install Codebase Digest
+      #   run: pip install codebase-digest
 
-      - name: Generate Single Prompt File
-        run: cdigest / -f consolidated_project_prompt.txt
+      # - name: Generate Single Prompt File
+      #   run: cdigest / -f consolidated_project_prompt.txt
