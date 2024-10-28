@@ -21,8 +21,12 @@ jobs:
 
       - name: Directory review
         run: ls -la
-      # - name: Install Codebase Digest
-      #   run: pip install codebase-digest
+        
+      - name: Install Codebase Digest
+        run: pip install codebase-digest
 
-      # - name: Generate Single Prompt File
-      #   run: cdigest / -f consolidated_project_prompt.txt
+      - name: Directory review
+        run: ls -la
+
+      - name: Generate Single Prompt File
+        run: cdigest . -f consolidated_project_prompt.txt
