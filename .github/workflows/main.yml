@@ -29,4 +29,10 @@ jobs:
         run: ls -la
 
       - name: Generate Single Prompt File
-        run: cdigest . -f consolidated_project_prompt.txt
+        run: cdigest . -f consolidated_project_prompt.txt --copy-to-clipboard=false	
+
+      - name: Upload Prompt File as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: consolidated_project_prompt
+          path: consolidated_project_prompt.txt
